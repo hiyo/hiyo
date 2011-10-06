@@ -1,0 +1,30 @@
+%h1
+  Hi, I'm Jabby
+
+%table
+  %tr
+    %th ID
+    %th Sign Up Step
+    %th Call PIN
+    %th Email
+    %th Registered
+    %th Aws Account ID
+  - Aws.all.each do |aws|
+    %tr
+      %td
+        - if aws.registered
+          %a{:href => "/a/#{aws.id.to_s}/billing"}
+            = aws.id.to_s
+        - else
+          %a{:href => "/a/#{aws.id.to_s}"}
+            = aws.id.to_s
+      %td= aws.registration.step
+      %td= aws.registration.call_pin
+      %td= aws.email
+      %td= aws.registered
+      %td= aws.account_id
+
+%br
+
+%a{:href => '/new/a'}
+  New Aws Account

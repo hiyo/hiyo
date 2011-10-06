@@ -1,0 +1,44 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activemodel (3.0.5)
+      activesupport (= 3.0.5)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activesupport (3.0.5)
+    bouncy-castle-java (1.5.0145.2)
+    bson (1.2.4-java)
+    builder (2.1.2)
+    celerity (0.8.8)
+    haml (3.0.25)
+    i18n (0.5.0)
+    jruby-openssl (0.7.3)
+      bouncy-castle-java
+    json (1.5.0-java)
+    mongo (1.2.4)
+      bson (>= 1.2.4)
+    mongoid (2.0.0.rc.7)
+      activemodel (~> 3.0)
+      mongo (~> 1.2)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
+    rack (1.2.2)
+    redis (2.1.1)
+    sinatra (1.2.0)
+      rack (~> 1.1)
+      tilt (>= 1.2.2, < 2.0)
+    tilt (1.2.2)
+    tzinfo (0.3.25)
+    will_paginate (3.0.pre2)
+
+PLATFORMS
+  java
+
+DEPENDENCIES
+  celerity
+  haml
+  jruby-openssl
+  json
+  mongoid (= 2.0.0.rc.7)
+  redis
+  sinatra

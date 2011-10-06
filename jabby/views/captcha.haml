@@ -1,0 +1,9 @@
+%img{:src => @aws.registration.captcha_url}
+%br
+%form{ :action => "/a/#{@aws.id.to_s}/captcha", :method => "post"}
+  %fieldset
+    %label{:for => "captcha_text"} Enter Captcha Text:
+    %input{:type => "text", :name => "captcha_text"}
+    %br
+    %input{:type => "submit", :value => "Submit"}
+

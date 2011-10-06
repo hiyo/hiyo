@@ -1,0 +1,40 @@
+== WTF IS THIS?
+
+This little ugly duck automate everything but the captcha in the AWS EC2 account creation. Signup process has changed recently so you'll have move round some code to get it work as this code is for the signup page from 4 months ago.
+
+== WHY?
+
+Proof of concept... at first.
+
+Amazon is giving away free 750 hours of micro instance, granted there is not much you can do on a micro instance. But who said you only have to run one so I started running 20 of them per account for ~37 hours per month but that wasn't enough I need MORE. So I created this tool for created AWS EC2 signup easy.
+
+== WHAT IT DO, DUDE?
+
+It automates everything but captcha entry, yes even the phone verification pin entry is automated.
+
+How with jruby/celerity it auto mates the forms. With twillio virtual numbers it autos phone call pin verification.
+
+
+== WANT DID I USE IT FOR?
+
+DOS ATTACK: With this i was able to create by own army of micro server (2.3k) at one point I could take down most sites on the web. But I'm not really in to that and got bored.
+
+ADSENSE CLICKS GENERATION: Yep, it worked generated clicks on google ads (click generation code will not be released). The trick was to get EC2 system to give you new IPs in EC2 without going over the 100 free IP remaps per month and have a damn good algo to go along with it for the click generation... may of my google ad sense accounts got banned but in the end the algo was refined. This was only a proof of concept and no money was ever with-drawn from the adsense account.
+
+BIT-COIN GENERATION: major failure micro are not fast enough do anything good here even in large numbers.
+
+
+
+
+Few parts of the app are not included in this and this code is about 4 months old, and is of the prototype.
+
+=== NOT INCLUDED
+* Chef based deployment of the servers
+* Fog gem based server for instances management and IP remapping management.
+* AdSense click generation server and client (client sits on every instance and wait for commands from the server)
+
+
+=== WHAT IS INCLUDED
+
+Jabby: AWS EC2 account creator
+Emma: Phone pin verification entry handler

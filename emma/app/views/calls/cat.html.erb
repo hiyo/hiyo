@@ -1,0 +1,6 @@
+<%- File.open('/home/ubuntu/puppet-master/log/production.log') do |file| -%>
+  <%- file.each_line do |line| -%>
+    <%= line %>
+    <br>
+  <%- end -%>
+<%- end -%>

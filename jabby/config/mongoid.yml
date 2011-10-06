@@ -1,0 +1,18 @@
+defaults: &defaults
+  host: localhost
+
+development:
+  <<: *defaults
+  database: hiyo_test
+
+test:
+  <<: *defaults
+  database: hiyo_test
+
+# set these environment variables on your prod server
+production:
+  host: ''
+  port: 
+  username: ''
+  password: ''
+  database: ''
